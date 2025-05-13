@@ -2,7 +2,7 @@ public class Polynomial {
     double[] coefficients;
 
     public Polynomial() {
-        coefficients = new double[]{0};
+        coefficients = new double[] {0};
     }
 
     public Polynomial(double[] coefficients) {
@@ -26,10 +26,8 @@ public class Polynomial {
             return other.add(this);
         }
 
-        for (int i = 0; i < coefficients.length; i++) {
-            if (i < other.coefficients.length) {
-                coefficients[i] += other.coefficients[i];
-            }
+        for (int i = 0; i < other.coefficients.length; i++) {
+            coefficients[i] += other.coefficients[i];
         }
 
         return this;
